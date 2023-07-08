@@ -1,0 +1,170 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Press Job Type",
+  "modified": "2022-11-10 16:43:54.861788",
+  "name": "Create Server",
+  "steps": [
+   {
+    "parent": "Create Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.provision()\n",
+    "step_name": "Create Server",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Create Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Running\", False)\n",
+    "step_name": "Wait for Server to start",
+    "wait_until_true": 1
+   },
+   {
+    "parent": "Create Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "server = frappe.get_doc(doc.server_type, doc.server)\nserver.ping_ansible()\n\nplays = frappe.get_all(\"Ansible Play\", {\"server\": doc.server, \"play\": \"Ping Server\"}, [\"status\"], order_by=\"creation desc\", limit=1)\nresult = (plays and plays[0].status == \"Success\", False)\n",
+    "step_name": "Wait for Server to be accessible",
+    "wait_until_true": 1
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Press Job Type",
+  "modified": "2022-11-01 14:38:02.723500",
+  "name": "Resize Server",
+  "steps": [
+   {
+    "parent": "Resize Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.stop()",
+    "step_name": "Stop Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Resize Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Stopped\", False)",
+    "step_name": "Wait for Virtual Machine to Stop",
+    "wait_until_true": 1
+   },
+   {
+    "parent": "Resize Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.resize(arguments.machine_type)",
+    "step_name": "Resize Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Resize Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.start()",
+    "step_name": "Start Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Resize Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Running\", False)",
+    "step_name": "Wait for Virtual Machine to Start",
+    "wait_until_true": 1
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Press Job Type",
+  "modified": "2022-11-01 14:39:17.917847",
+  "name": "Create Server Snapshot",
+  "steps": [
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.stop()\n",
+    "step_name": "Stop Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Stopped\", False)",
+    "step_name": "Wait for Virtual Machine to Stop",
+    "wait_until_true": 1
+   },
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\narguments.image = machine.create_image()",
+    "step_name": "Create Snapshot",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.start()",
+    "step_name": "Start Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Running\", False)",
+    "step_name": "Wait for Virtual Machine to Start",
+    "wait_until_true": 1
+   },
+   {
+    "parent": "Create Server Snapshot",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "image = frappe.get_doc(\"Virtual Machine Image\", arguments.image)\nimage.sync()\nresult = (image.status == \"Available\", False)",
+    "step_name": "Wait for Snapshot to Complete",
+    "wait_until_true": 1
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Press Job Type",
+  "modified": "2022-11-01 14:35:52.936503",
+  "name": "Archive Server",
+  "steps": [
+   {
+    "parent": "Archive Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.disable_termination_protection()",
+    "step_name": "Disable Termination Protection",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Archive Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.terminate()",
+    "step_name": "Terminate Virtual Machine",
+    "wait_until_true": 0
+   },
+   {
+    "parent": "Archive Server",
+    "parentfield": "steps",
+    "parenttype": "Press Job Type",
+    "script": "machine = frappe.get_doc(\"Virtual Machine\", doc.virtual_machine)\nmachine.sync()\nresult = (machine.status == \"Terminated\", False)",
+    "step_name": "Wait for Virtual Machine to Terminate",
+    "wait_until_true": 1
+   }
+  ]
+ }
+]

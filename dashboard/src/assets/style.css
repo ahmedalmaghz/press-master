@@ -1,0 +1,53 @@
+@import './Inter/inter.css';
+@import 'frappe-charts/dist/frappe-charts.min.css';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+	.form-input,
+	.form-textarea,
+	.form-select {
+		@apply rounded-md border-0 bg-gray-100 py-1 text-base leading-5 placeholder-gray-700 focus:bg-gray-200 focus:shadow-none focus:ring-0;
+	}
+
+	.form-checkbox {
+		@apply rounded-md text-blue-500;
+	}
+
+	.frappe-chart .line-vertical {
+		display: none;
+	}
+
+	/* Works on Firefox */
+	* {
+		scrollbar-width: thin;
+		scrollbar-color: #c0c6cc #ebeef0;
+	}
+
+	html {
+		scrollbar-width: auto;
+	}
+
+	/* Works on Chrome, Edge, and Safari */
+	*::-webkit-scrollbar-thumb {
+		background: #c0c6cc;
+		border-radius: 6px;
+	}
+
+	*::-webkit-scrollbar-track,
+	*::-webkit-scrollbar-corner {
+		background: #ebeef0;
+	}
+
+	*::-webkit-scrollbar {
+		width: 6px;
+		height: 6px;
+	}
+
+	body::-webkit-scrollbar {
+		width: 12px;
+		height: 12px;
+	}
+}

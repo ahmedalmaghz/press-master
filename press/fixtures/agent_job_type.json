@@ -1,0 +1,1542 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-06-16 20:39:50.568363",
+  "name": "Rename Upstream",
+  "request_method": "POST",
+  "request_path": "/proxy/upstreams/{ip}/rename",
+  "steps": [
+   {
+    "parent": "Rename Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Rename Upstream Directory"
+   },
+   {
+    "parent": "Rename Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Rename Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-01-27 10:42:40.678534",
+  "name": "Rename Site",
+  "request_method": "POST",
+  "request_path": "benches/{site.bench}/sites/{site.name}/rename",
+  "steps": [
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Maintenance Mode"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Wait for Enqueued Jobs"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Rename Site"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   },
+   {
+    "parent": "Rename Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Scheduler"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-02-21 12:34:39.569810",
+  "name": "Recover Failed Site Migration",
+  "request_method": null,
+  "request_path": null,
+  "steps": [
+   {
+    "parent": "Recover Failed Site Migration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Recover Failed Site Migration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Restore Touched Tables"
+   },
+   {
+    "parent": "Recover Failed Site Migration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-08-11 12:17:23.658693",
+  "name": "Add Domain",
+  "request_method": "POST",
+  "request_path": "benches/{bench}/sites/{site}/domains",
+  "steps": [
+   {
+    "parent": "Add Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   },
+   {
+    "parent": "Add Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Add Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-08-11 12:17:43.993040",
+  "name": "Remove Domain",
+  "request_method": "DELETE",
+  "request_path": "benches/{bench}/sites/{site}/domains/{domain}",
+  "steps": [
+   {
+    "parent": "Remove Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   },
+   {
+    "parent": "Remove Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Remove Domain",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-07 16:10:22.420615",
+  "name": "Update Site Configuration",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/config",
+  "steps": [
+   {
+    "parent": "Update Site Configuration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-07-27 19:18:17.532920",
+  "name": "Update Site Pull",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/pull",
+  "steps": [
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Maintenance Mode"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Wait for Enqueued Jobs"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX Target"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Update Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2023-05-04 14:15:26.755183",
+  "name": "Update Site Migrate",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/migrate",
+  "steps": [
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Maintenance Mode"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Wait for Enqueued Jobs"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Clear Backup Directory"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Backup Site Tables"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX Target"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Run App Specific Scripts"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Migrate Site"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   },
+   {
+    "parent": "Update Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Build Search Index"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-06-17 16:44:12.364275",
+  "name": "Backup Site",
+  "request_method": null,
+  "request_path": null,
+  "steps": [
+   {
+    "parent": "Backup Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Backup Site"
+   },
+   {
+    "parent": "Backup Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Upload Site Backup to S3"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-15 14:59:02.613798",
+  "name": "New Site",
+  "request_method": null,
+  "request_path": null,
+  "steps": [
+   {
+    "parent": "New Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "New Site"
+   },
+   {
+    "parent": "New Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Install Apps"
+   },
+   {
+    "parent": "New Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   },
+   {
+    "parent": "New Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "New Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-03 23:20:55.186989",
+  "name": "Add Host to Proxy",
+  "request_method": "POST",
+  "request_path": "/proxy/hosts",
+  "steps": [
+   {
+    "parent": "Add Host to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Host to Proxy"
+   },
+   {
+    "parent": "Add Host to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Add Host to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-03 23:20:14.208716",
+  "name": "Add Site to Upstream",
+  "request_method": "POST",
+  "request_path": "/proxy/upstreams/{upstream}/sites",
+  "steps": [
+   {
+    "parent": "Add Site to Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Site File to Upstream Directory"
+   },
+   {
+    "parent": "Add Site to Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Add Site to Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-03 23:20:08.170631",
+  "name": "Add Upstream to Proxy",
+  "request_method": "POST",
+  "request_path": "/proxy/upstreams",
+  "steps": [
+   {
+    "parent": "Add Upstream to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Upstream Directory"
+   },
+   {
+    "parent": "Add Upstream to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Add Upstream to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-12-11 14:03:35.053168",
+  "name": "New Bench",
+  "request_method": "POST",
+  "request_path": "/benches",
+  "steps": [
+   {
+    "parent": "New Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Initialize Bench"
+   },
+   {
+    "parent": "New Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Bench Configuration"
+   },
+   {
+    "parent": "New Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Deploy Bench"
+   },
+   {
+    "parent": "New Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-03 23:19:43.720292",
+  "name": "Remove Site from Upstream",
+  "request_method": "DELETE",
+  "request_path": "/proxy/upstreams/{upstream}/sites/{site}",
+  "steps": [
+   {
+    "parent": "Remove Site from Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Site File from Upstream Directory"
+   },
+   {
+    "parent": "Remove Site from Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Remove Site from Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-02-20 10:19:17.561733",
+  "name": "Archive Site",
+  "request_method": null,
+  "request_path": null,
+  "steps": [
+   {
+    "parent": "Archive Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Archive Site"
+   },
+   {
+    "parent": "Archive Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Archive Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-03 20:16:04.843363",
+  "name": "Archive Bench",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/archive",
+  "steps": [
+   {
+    "parent": "Archive Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Disable Production"
+   },
+   {
+    "parent": "Archive Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Bench to Archived Directory"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-04-08 15:02:15.559811",
+  "name": "Install App on Site",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/apps",
+  "steps": [
+   {
+    "parent": "Install App on Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Install App on Site"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-07-30 10:46:32.814468",
+  "name": "New Site from Backup",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/restore",
+  "steps": [
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Download Backup Files"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "New Site"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site Configuration"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Restore Site"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Delete Downloaded Backup Files"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Uninstall Unavailable Apps"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Migrate Site"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Set Administrator Password"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Scheduler"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "New Site from Backup",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-05-06 11:08:03.470650",
+  "name": "Reinstall Site",
+  "request_method": "POST",
+  "request_path": "benches/{bench}/sites/{site}/reinstall",
+  "steps": [
+   {
+    "parent": "Reinstall Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reinstall Site"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-05-14 09:39:59.938256",
+  "name": "Restore Site",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/restore",
+  "steps": [
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Download Backup Files"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Restore Site"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Delete Downloaded Backup Files"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Uninstall Unavailable Apps"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Migrate Site"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Set Administrator Password"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Scheduler"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Restore Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-05-21 14:43:42.827772",
+  "name": "Update Site Status",
+  "request_method": "POST",
+  "request_path": "/proxy/upstreams/{upstream}/sites/{site}/status",
+  "steps": [
+   {
+    "parent": "Update Site Status",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Site File"
+   },
+   {
+    "parent": "Update Site Status",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Update Site Status",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-02-01 16:31:25.999308",
+  "name": "Update Bench Configuration",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/config",
+  "steps": [
+   {
+    "parent": "Update Bench Configuration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Bench Configuration"
+   },
+   {
+    "parent": "Update Bench Configuration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Update Bench Configuration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate Docker Compose File"
+   },
+   {
+    "parent": "Update Bench Configuration",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Deploy Bench"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-06-26 15:27:03.310761",
+  "name": "Uninstall App from Site",
+  "request_method": "DELETE",
+  "request_path": "/benches/{bench}/sites/{site}/apps",
+  "steps": [
+   {
+    "parent": "Uninstall App from Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Uninstall App from Site"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-07-27 20:49:03.616821",
+  "name": "Recover Failed Site Pull",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/pull/recover",
+  "steps": [
+   {
+    "parent": "Recover Failed Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Recover Failed Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Recover Failed Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX Target"
+   },
+   {
+    "parent": "Recover Failed Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Recover Failed Site Pull",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-07-27 20:48:53.225074",
+  "name": "Recover Failed Site Update",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/recover",
+  "steps": [
+   {
+    "parent": "Recover Failed Site Update",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2023-05-04 14:15:56.315104",
+  "name": "Recover Failed Site Migrate",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/migrate/recover",
+  "steps": [
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX Target"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Restore Touched Tables"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Run App Specific Scripts"
+   },
+   {
+    "parent": "Recover Failed Site Migrate",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-08-05 17:32:00.556643",
+  "name": "Remove Host from Proxy",
+  "request_method": "DELETE",
+  "request_path": "/proxy/hosts/{host}",
+  "steps": [
+   {
+    "parent": "Remove Host from Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Host from Proxy"
+   },
+   {
+    "parent": "Remove Host from Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Remove Host from Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-08-06 10:47:06.751838",
+  "name": "Migrate Site",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/migrate",
+  "steps": [
+   {
+    "parent": "Migrate Site",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Migrate Site"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-10-02 15:34:23.594712",
+  "name": "Fetch Sites Info",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/info",
+  "steps": [
+   {
+    "parent": "Fetch Sites Info",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Fetch Sites Info"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-11-30 12:12:41.282921",
+  "name": "Setup Redirects on Hosts",
+  "request_method": "POST",
+  "request_path": "/proxy/hosts/redirects",
+  "steps": [
+   {
+    "parent": "Setup Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Redirect on Host"
+   },
+   {
+    "parent": "Setup Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Setup Redirect on Host"
+   },
+   {
+    "parent": "Setup Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Setup Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2020-11-30 12:12:21.595092",
+  "name": "Remove Redirects on Hosts",
+  "request_method": "DELETE",
+  "request_path": "/proxy/hosts/redirects",
+  "steps": [
+   {
+    "parent": "Remove Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Redirect on Host"
+   },
+   {
+    "parent": "Remove Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Remove Redirects on Hosts",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-01-29 11:14:16.705614",
+  "name": "Rename Site on Upstream",
+  "request_method": "POST",
+  "request_path": "/proxy/upstreams/{upstream}/sites/{site}/rename",
+  "steps": [
+   {
+    "parent": "Rename Site on Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Rename Site File in Upstream Directory"
+   },
+   {
+    "parent": "Rename Site on Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Rename Host Directory"
+   },
+   {
+    "parent": "Rename Site on Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Rename Site in Host Directory"
+   },
+   {
+    "parent": "Rename Site on Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Rename Site on Upstream",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-03-25 22:42:47.808999",
+  "name": "Add Wildcard Hosts to Proxy",
+  "request_method": "POST",
+  "request_path": "/proxy/wildcards",
+  "steps": [
+   {
+    "parent": "Add Wildcard Hosts to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Wildcard Hosts to Proxy"
+   },
+   {
+    "parent": "Add Wildcard Hosts to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Generate NGINX Configuration"
+   },
+   {
+    "parent": "Add Wildcard Hosts to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-04-05 16:24:05.014172",
+  "name": "Setup ERPNext",
+  "request_method": "POST",
+  "request_path": "/benches/{site.bench}/sites/{site.name}/erpnext",
+  "steps": [
+   {
+    "parent": "Setup ERPNext",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Create User"
+   },
+   {
+    "parent": "Setup ERPNext",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update ERPNext Configuration"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-04-04 12:27:30.772719",
+  "name": "Clear Cache",
+  "request_method": "DELETE",
+  "request_path": "/benches/{bench}/sites/{site}/cache",
+  "steps": [
+   {
+    "parent": "Clear Cache",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Clear Cache"
+   },
+   {
+    "parent": "Clear Cache",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Clear Website Cache"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-04-12 22:01:07.809393",
+  "name": "Restore Site Tables",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/migrate/restore",
+  "steps": [
+   {
+    "parent": "Restore Site Tables",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Restore Site Tables"
+   },
+   {
+    "parent": "Restore Site Tables",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-01-16 13:37:05.759970",
+  "name": "Add User to Proxy",
+  "request_method": "POST",
+  "request_path": "/ssh/users",
+  "steps": [
+   {
+    "parent": "Add User to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add User to Proxy"
+   },
+   {
+    "parent": "Add User to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Certificate to User"
+   },
+   {
+    "parent": "Add User to Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Principal to User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-01-16 13:38:57.132558",
+  "name": "Remove User from Proxy",
+  "request_method": "DELETE",
+  "request_path": "/ssh/users/{user}",
+  "steps": [
+   {
+    "parent": "Remove User from Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove User from Proxy"
+   },
+   {
+    "parent": "Remove User from Proxy",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Principal from User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-07 12:43:09.605095",
+  "name": "Add User to ProxySQL",
+  "request_method": "POST",
+  "request_path": "/proxysql/users",
+  "steps": [
+   {
+    "parent": "Add User to ProxySQL",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add User to ProxySQL"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-07 12:43:46.446468",
+  "name": "Remove User from ProxySQL",
+  "request_method": "DELETE",
+  "request_path": "/proxysql/users/{username}",
+  "steps": [
+   {
+    "parent": "Remove User from ProxySQL",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove User from ProxySQL"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-13 14:26:09.458148",
+  "name": "Create Minio User",
+  "request_method": "POST",
+  "request_path": "/minio/create",
+  "steps": [
+   {
+    "parent": "Create Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Create Minio User"
+   },
+   {
+    "parent": "Create Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Create Minio Policy"
+   },
+   {
+    "parent": "Create Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Minio Policy"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-13 14:26:41.239106",
+  "name": "Remove Minio User",
+  "request_method": "POST",
+  "request_path": "/minio/remove",
+  "steps": [
+   {
+    "parent": "Remove Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Minio User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-15 14:21:09.184479",
+  "name": "Enable Minio User",
+  "request_method": "POST",
+  "request_path": "/minio/update",
+  "steps": [
+   {
+    "parent": "Enable Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Minio User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-15 14:21:14.416719",
+  "name": "Disable Minio User",
+  "request_method": "POST",
+  "request_path": "/minio/update",
+  "steps": [
+   {
+    "parent": "Disable Minio User",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Minio User"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-04-26 12:43:33.641886",
+  "name": "Bench Restart",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/restart",
+  "steps": [
+   {
+    "parent": "Bench Restart",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Restart"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2021-10-14 09:27:02.587048",
+  "name": "Cleanup Unused Files",
+  "request_method": "POST",
+  "request_path": "server/cleanup",
+  "steps": [
+   {
+    "parent": "Cleanup Unused Files",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Archived Benches"
+   },
+   {
+    "parent": "Cleanup Unused Files",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Temporary Files"
+   },
+   {
+    "parent": "Cleanup Unused Files",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Remove Unused Docker Artefacts"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-05-11 13:02:45.175768",
+  "name": "Add Backend to ProxySQL",
+  "request_method": "POST",
+  "request_path": "/proxysql/backends",
+  "steps": [
+   {
+    "parent": "Add Backend to ProxySQL",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Add Backend to ProxySQL"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-02-15 14:21:14.416719",
+  "name": "Update Saas Plan",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/update/saas",
+  "steps": [
+   {
+    "parent": "Update Saas Plan",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Update Saas Plan"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-11-17 10:12:13.952175",
+  "name": "Run After Migrate Steps",
+  "request_method": "POST",
+  "request_path": "benches/{bench}/sites/{site}/run_after_migrate_steps",
+  "steps": [
+   {
+    "parent": "Run After Migrate Steps",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Set Administrator Password"
+   },
+   {
+    "parent": "Run After Migrate Steps",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Run After Migrate Steps",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Run After Migrate Steps",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   },
+   {
+    "parent": "Run After Migrate Steps",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Scheduler"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2022-12-02 07:54:16.581300",
+  "name": "Move Site to Bench",
+  "request_method": "POST",
+  "request_path": "/benches/{bench}/sites/{site}/move_to_bench",
+  "steps": [
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Enable Maintenance Mode"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Wait for Enqueued Jobs"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Move Site"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Bench Setup NGINX Target"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reload NGINX"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Migrate Site"
+   },
+   {
+    "parent": "Move Site to Bench",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Disable Maintenance Mode"
+   }
+  ]
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Agent Job Type",
+  "modified": "2023-03-14 12:29:53.005324",
+  "name": "Reset Site Usage",
+  "request_method": "DELETE",
+  "request_path": "benches/{bench}/sites/{site}/usage",
+  "steps": [
+   {
+    "parent": "Reset Site Usage",
+    "parentfield": "steps",
+    "parenttype": "Agent Job Type",
+    "step_name": "Reset Site Usage"
+   }
+  ]
+ }
+]

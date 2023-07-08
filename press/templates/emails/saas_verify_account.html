@@ -1,0 +1,19 @@
+{% import "templates/emails/macros.html" as utils %}
+{% extends "templates/emails/saas.html" %}
+{% set title = title %}
+
+{% block content %}
+
+<td class="text-base leading-6 text-gray-900">
+    <div class="p-8 bg-white from-markdown">
+        <p class="mb-4">
+            {{ message|safe }}
+        </p>
+        <br>
+        {{ utils.button('Verify Account', link, true) }}
+        {{ utils.separator() }}
+        {{ signature_text }}
+    </div>
+</td>
+
+{% endblock %}
